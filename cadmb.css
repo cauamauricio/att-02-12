@@ -136,11 +136,7 @@ nav a:hover {
 .imagem-container {
     display: flex;
     flex-direction: column;
-    ;
-    gap: 25px;
-    width: 400px;
-    position: static; 
-    z-index: 1; 
+    width: 200px;
 }
 
 .img-direita {
