@@ -24,7 +24,7 @@ body::before {
     z-index: 0;
 }
 
-/* Adicionei isso */
+/* Adicionando conteúdo principal */
 .conteudo-principal {
     position: relative;
     z-index: 1;
@@ -95,6 +95,7 @@ nav a:hover {
 
 .conteudo-principal {
     display: flex;
+    flex-direction: row;
     gap: 40px;
     padding: 40px;
     margin: 30px auto;
@@ -131,26 +132,25 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-
+/* Adicionar para organizar as imagens em seções de 3 por linha */
 .imagem-container {
-    display: flex;
-    flex-direction: column;
-    ;
-    gap: 25px;
-    width: 400px;
-    position: static; 
-    z-index: 1; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 imagens por linha */
+    gap: 20px; /* Espaço entre as imagens */
+    width: 100%;
+    padding: 20px;
 }
 
+/* Ajustando para que a imagem ocupe o espaço adequado e se alinhe corretamente */
 .img-direita {
-    width: 100%;
+    width: 100%; /* Isso vai garantir que a imagem ocupe o espaço dentro do grid */
     height: auto;
     border-radius: 15px;
     border: 2px solid #FF6AD5;
     box-shadow: 0 0 20px rgba(255, 106, 213, 0.3);
     background: rgba(43, 11, 63, 0.3);
     padding: 10px;
-    position: relative; 
+    position: relative;
 }
 
 .segunda-imagem {
@@ -171,18 +171,15 @@ footer {
     margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-    .conteudo-principal {
-        flex-direction: column;
-        padding: 20px;
-    }
-    
+/* Responsividade para telas menores, ajustando para 2 ou 1 imagem por linha */
+@media (max-width: 1024px) {
     .imagem-container {
-        width: 100%;
+        grid-template-columns: repeat(2, 1fr); /* 2 imagens por linha */
     }
-    
-    .links nav {
-        flex-direction: column;
-        text-align: center;
+}
+
+@media (max-width: 768px) {
+    .imagem-container {
+        grid-template-columns: 1fr; /* 1 imagem por linha */
     }
 }
