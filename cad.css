@@ -22,6 +22,17 @@ body::before {
     z-index: -1; 
 }
 
+
+#morango {
+    position: fixed;
+    width: 100px; 
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s; 
+    z-index: 9999; 
+}
+
+
 header, nav, .bv, .container-animacao, footer {
     position: relative;
     z-index: 1; 
@@ -65,7 +76,6 @@ nav a {
     border: 2px solid #FFB8FD;
     border-radius: 30px;
     background: rgba(255, 184, 253, 0.3);
-    transition: all 0.2s ease;
 }
 
 nav a:hover {
