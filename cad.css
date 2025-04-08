@@ -18,7 +18,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(59, 13, 88, 0.85);
+    background: rgba(59, 13, 88, 0.60);
     z-index: -1; 
 }
 
