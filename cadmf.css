@@ -1,193 +1,74 @@
-body {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-image: url('img/111.png');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            position: relative;
-        }
 
-        body::before {
-            width: 100%;
-            height: 100%;
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(59, 13, 88, 0.85);
-            z-index: 0;
-        }
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 40px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+}
 
-        /* Adicionando conteúdo principal */
-        .conteudo-principal {
-            position: relative;
-            z-index: 1;
-        }
+.texto-container {
+    max-width: 600px;
+    background: rgba(43, 11, 63, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #FF6AD5;
+    backdrop-filter: blur(5px);
+}
 
-        header, nav, .principal, footer {
-            position: relative;
-            z-index: 1;
-        }
+.texto-container h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #FF6AD5;
+}
 
-        header {
-            font-family: 'Courier New', monospace;
-            border: 2px solid #FF6AD5;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(90deg, #2B0B3F, #6D3A9A);
-            padding: 10px 20px;
-            box-shadow: 0 0 15px rgba(255, 106, 213, 0.3);
-        }
+.historia-texto {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 30px;
+}
 
-        .img1, .img2 {
-            width: 110px;
-            height: 100px;
-            border: 2px solid #FF6AD5;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 106, 213, 0.5);
-        }
+.imagem-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            background: linear-gradient(45deg, #6D3A9A, #FF6AD5);
-            border: 2px solid #FFB8FD;
-            padding: 10px;
-            margin: 20px;
-            border-radius: 15px;
-        }
+.img-direita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    border: 2px solid #FF6AD5;
+    box-shadow: 0 0 20px rgba(255, 106, 213, 0.3);
+    background: rgba(43, 11, 63, 0.3);
+    padding: 10px;
+    overflow: hidden;
+}
 
-        nav a {
-            color: #2B0B3F;
-            text-decoration: none;
-            border: 2px solid #FFB8FD;
-            border-radius: 30px;
-            padding: 10px 20px;
-            margin: 0 10px;
-            background: rgba(255, 184, 253, 0.3);
-        }
+.img-direita img {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
-        nav a:hover {
-            background: #FFB8FD;
-            color: #2B0B3F;
-            box-shadow: 0 0 15px #FFB8FD;
-            transform: translateY(-2px);
-        }
+.texto-imagem {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1em;
+    color: #FF6AD5;
+}
 
-        .principal {
-            width: 90%;
-            max-width: 800px;
-            background: rgba(43, 11, 63, 0.8);
-            margin: 50px auto;
-            padding: 30px;
-            border-radius: 20px;
-            border: 2px solid #FF6AD5;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 30px rgba(255, 106, 213, 0.2);
-        }
-
-        .conteudo-principal {
-            display: flex;
-            flex-direction: row;
-            gap: 40px;
-            padding: 40px;
-            margin: 30px auto;
-            width: 90%;
-            max-width: 1200px;
-        }
-
-        .texto-container {
-            max-width: 600px;
-            overflow: hidden;
-            flex: 1;
-            background: rgba(43, 11, 63, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-            border: 2px solid #FF6AD5;
-            backdrop-filter: blur(5px);
-        }
-
-        .texto-container h1 {
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #FF6AD5;
-        }
-
-        .texto-container p {
-            margin-bottom: 1.5em;
-            line-height: 1.5;
-        }
-
-        .historia-texto {
-            font-size: 1.1em;
-            line-height: 1.6;
-            text-align: justify;
-            margin-bottom: 30px;
-        }
-
-        .imagem-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 imagens por linha */
-            gap: 20px; /* Espaço entre as imagens */
-            width: 100%;
-            padding: 20px;
-        }
-        
-        .img-direita {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 300px; /* Limita a largura máxima das imagens */
-            height: auto;
-            border-radius: 15px;
-            border: 2px solid #FF6AD5;
-            box-shadow: 0 0 20px rgba(255, 106, 213, 0.3);
-            background: rgba(43, 11, 63, 0.3);
-            padding: 10px;
-            position: relative;
-            overflow: hidden; /* Garante que nada fique para fora do contêiner */
-        }
-        
-        .img-direita img {
-            width: 100%; /* Garante que a imagem ocupe toda a largura disponível no contêiner */
-            max-height: 200px; /* Limita a altura máxima das imagens */
-            object-fit: cover; /* Mantém a proporção e corta a imagem para preencher o espaço */
-            border-radius: 10px;
-        }
-        
-        .texto-imagem {
-            margin-top: 10px;
-            text-align: center;
-            font-size: 1em;
-            color: #FF6AD5;
-        }
-        
-        /* Ajustando para imagens de diferentes tamanhos em telas menores */
-        @media (max-width: 1024px) {
-            .imagem-container {
-                grid-template-columns: repeat(2, 1fr); /* 2 imagens por linha */
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .imagem-container {
-                grid-template-columns: 1fr; /* 1 imagem por linha */
-            }
-        
-            .img-direita {
-                max-width: 100%; /* Para ocupar todo o espaço disponível em telas menores */
-            }
-        
-            .img-direita img {
-                max-height: 150px; /* Limita a altura das imagens em telas menores */
-            }
-        }
+@media (max-width: 768px) {
+    .imagem-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,86 +1,4 @@
 
-body {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url('img/111.png');
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-body::before {
-    width: 100%;
-    height: 100%;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(59, 13, 88, 0.85);
-    z-index: 0;
-}
-
-/* Adicionei isso */
-.conteudo-principal {
-    position: relative;
-    z-index: 1;
-}
-
-header, nav, .principal, footer {
-    position: relative;
-    z-index: 1;
-}
-
-header {
-    font-family: 'Courier New', monospace;
-    border: 2px solid #FF6AD5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(90deg, #2B0B3F, #6D3A9A);
-    padding: 10px 20px;
-    box-shadow: 0 0 15px rgba(255, 106, 213, 0.3);
-}
-
-.img1, .img2 {
-    width: 110px;
-    height: 100px;
-    border: 2px solid #FF6AD5;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 106, 213, 0.5);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(45deg, #6D3A9A, #FF6AD5);
-    border: 2px solid #FFB8FD;
-    padding: 10px;
-    margin: 20px;
-    border-radius: 15px;
-}
-
-nav a {
-    color: #2B0B3F;
-    text-decoration: none;
-    border: 2px solid #FFB8FD;
-    border-radius: 30px;
-    padding: 10px 20px;
-    margin: 0 10px;
-    background: rgba(255, 184, 253, 0.3);
-}
-
-nav a:hover {
-    background: #FFB8FD;
-    color: #2B0B3F;
-    box-shadow: 0 0 15px #FFB8FD;
-    transform: translateY(-2px);
-}
 
 .principal {
     width: 90%;
@@ -168,21 +86,7 @@ footer {
     margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-    .conteudo-principal {
-        flex-direction: column;
-        padding: 20px;
-    }
-    
-    .imagem-container {
-        width: 100%;
-    }
-    
-    .links nav {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+
 
 
 
